@@ -13,6 +13,10 @@ body, input, button, textarea {
   font: 400 16px 'Roboto', sans-serif;
 }
 
+input, textarea {
+  outline-color: #835AFD;
+}
+
 button {
   border: 0;
   cursor: pointer;

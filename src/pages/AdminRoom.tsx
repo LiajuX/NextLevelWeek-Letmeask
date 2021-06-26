@@ -1,6 +1,6 @@
 import { useHistory, useParams } from 'react-router-dom';
 
-import { useRoom } from '../contexts/useRoom';
+import { useRoom } from '../hooks/useRoom';
 
 import logoImg from '../assets/images/logo.svg';
 import deleteImg from '../assets/images/delete.svg';

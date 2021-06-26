@@ -2,7 +2,7 @@ import { FormEvent, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { useAuth } from '../hooks/useAuth';
-import { useRoom } from '../contexts/useRoom';
+import { useRoom } from '../hooks/useRoom';
 
 import logoImg from '../assets/images/logo.svg';
 
@@ -99,7 +99,12 @@ export function Room() {
               </span>
             ) }
 
-            <Button type="submit" disabled={!user}>Enviar pergunta</Button>
+            <Button 
+              type="submit" 
+              disabled={!user || newQuestion.trim() === ''}
+            >
+              Enviar pergunta
+            </Button>
           </div>
         </form>
 
