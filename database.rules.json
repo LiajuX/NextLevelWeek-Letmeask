@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "rooms": {
+      ".read": false,
+      // somente um usuário que está logado pode criar/write um novo room.
+      ".write": "auth != null",
+      "$roomId": {
+        ".read": true,
+        // somente um usuário que está logado e criou a sala pode alterar/write os dados do room.
+        ".write": "auth != null && (!data.exists() || data.child('authorId').val() == auth.id)",
+        "questions": {
+          ".read": true,
+          // Só quem criou a sala pode excluir ou alterar a pergunta.
+          ".write": "auth != null && (!data.exists() || data.parent().child('authorId').val() == auth.id)",
+          "likes": {
+            ".read": true,
+            // Só pode dar e remover seu próprio like
+            ".write": "auth != null && (!data.exists() || data.child('authorId').val() == auth.id)",  
+          }
+        }
+      }
+    }
+  }
+}

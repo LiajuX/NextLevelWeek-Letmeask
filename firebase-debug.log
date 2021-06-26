@@ -1,0 +1,21 @@
+[debug] [2021-06-26T18:52:15.829Z] ----------------------------------------------------------------------
+[debug] [2021-06-26T18:52:15.831Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Julia\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-06-26T18:52:15.831Z] CLI Version:   9.14.0
+[debug] [2021-06-26T18:52:15.831Z] Platform:      win32
+[debug] [2021-06-26T18:52:15.831Z] Node Version:  v14.17.0
+[debug] [2021-06-26T18:52:15.832Z] Time:          Sat Jun 26 2021 15:52:15 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2021-06-26T18:52:15.832Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-26T18:52:15.837Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-26T18:52:15.837Z] > authorizing via signed-in user (julialbritto@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Julia\Desktop\NLW\letmeask
+

@@ -1,0 +1,130 @@
+#page-room {
+  header {
+    padding: 24px;
+    border-bottom: 1px solid #E2E2E2;
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      max-width: 1120px;
+
+      margin: 0 auto;
+
+      > img {
+        max-height: 45px;
+      }
+
+      > div {
+        display: flex;
+        gap: 16px;
+
+        button {
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .room-title {
+      display: flex;
+      align-items: center;
+
+      margin: 32px 0 24px;
+
+      h1 {
+        color: #29292E;
+        font-size: 24px;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      span {
+        margin-left: 16px;
+        padding: 8px 16px;
+        border-radius: 9999px;
+
+        background: #E559F9;
+        color: #FFF;
+
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+    form {
+      textarea {
+        width: 100%;
+        min-height: 130px;
+
+        padding: 16px;
+        border: 0;
+        border-radius: 8px;
+
+        background: #FEFEFE;
+        
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        resize: vertical;
+      }
+
+      .form-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-top: 16px;
+
+        .user-info {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 32px;
+            height: 32px;
+
+            border-radius: 50%;
+          }
+
+          span {
+            margin-left: 8px;
+
+            color: #29292E;
+          
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+
+        > span {
+          color: #737380;
+
+          font-size: 14px;
+          font-weight: 500;
+
+          button {
+            background: transparent;
+            color: #835AFD;
+
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+
+            transition: filter 0.2s;
+      
+            &:hover {
+              filter: brightness(0.8);
+            }
+          }
+        }
+      }
+    }
+
+    .question-list {
+      margin-top: 32px;
+    }
+  }
+}
