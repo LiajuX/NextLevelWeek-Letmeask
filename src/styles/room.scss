@@ -123,8 +123,37 @@
       }
     }
 
+    .empty-questions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 20vh;
+
+      h3 {
+        margin: 16px 0 8px;
+
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      p {
+        width: 284px;
+
+        color: #737380;
+
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+      }
+    }
+
     .question-list {
-      margin-top: 32px;
+      margin: 32px 0;
     }
   }
 }

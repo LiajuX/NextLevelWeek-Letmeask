@@ -1,4 +1,5 @@
 import { FormEvent, useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import { useHistory } from 'react-router';
 
 import { useAuth } from '../hooks/useAuth';
@@ -28,6 +29,32 @@ export function Home() {
     history.push('/rooms/new');
   }
 
+  function showRoomDoesNotExistToast() {
+      toast('Esta sala não existe!',
+      {
+        duration: 2000,
+        style: {
+          borderRadius: '24px',
+          background: '#333',
+          color: '#F8F8F8',
+        },
+      }
+    );
+  } 
+
+  function showRoomIsClosedToast() {
+      toast('Esta sala já foi encerrada!',
+      {
+        duration: 2000,
+        style: {
+          borderRadius: '24px',
+          background: '#333',
+          color: '#F8F8F8',
+        },
+      }
+    );
+  } 
+
   async function handleJoinRoom(event: FormEvent) {
     event.preventDefault();
 
@@ -38,12 +65,12 @@ export function Home() {
     const roomRef = await database.ref(`rooms/${roomCode}`).get();
 
     if (!roomRef.exists()) {
-      alert('Room does not exist.');
+      showRoomDoesNotExistToast();
       return;
     }
 
     if (roomRef.val().endedAt) {
-      alert('This room is already closed.');
+      showRoomIsClosedToast();
       return;
     }
 
@@ -82,6 +109,8 @@ export function Home() {
           </form>
         </div>
       </main>
+
+      <Toaster />
     </div>
   );
 }
